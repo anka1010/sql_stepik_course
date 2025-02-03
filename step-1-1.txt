@@ -1,0 +1,47 @@
+VARCHAR(N) - строка длинной N
+INTEGER, INT - целые числовые данные от -2147483648 до 2147483647	
+DECIMAL(N, N), NUMERIC(N, N) - вещественное число, макс.длина до и после запятой
+DATETIME - дата и время
+
+DESCRIBE <table name> - описание типов столбцов таблицы
+
+---------------------------------
+
+book_id INT PRIMARY KEY AUTO_INCREMENT - поле primary key с автоинкрементом
+
+---------------------------------
+
+CREATE TABLE genre(
+	genre_id INT PRIMARY KEY AUTO_INCREMENT,
+	name_genre VARCHAR(30)
+);
+
+---------------------------------
+
+CREATE TABLE book(
+	book_id INT PRIMARY KEY AUTO_INCREMENT,
+	title VARCHAR(50),
+	author VARCHAR(30),
+	price DECIMAL(8,2),
+	amount INT
+);
+
+---------------------------------
+
+INSERT INTO genre (name_genre)
+VAKUES ('Роман');
+
+---------------------------------
+
+INSERT INTO book (title, author, price, amount)
+VALUES ('Мастер и Маргарита', 'Булгаков М.А.', 670.99, 3);
+
+INSERT INTO book (title, author, price, amount)
+VALUES ('Белая гвардия', 'Булгаков М.А.', 540.50, 5);
+
+INSERT INTO book (title, author, price, amount)
+VALUES ('Идиот', 'Достоевский Ф.М.', 460.00, 10);
+
+INSERT INTO book (title, author, price, amount)
+VALUES ('Братья Карамазовы', 'Достоевский Ф.М.', 799.01, 2);
+
